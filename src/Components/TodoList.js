@@ -1,20 +1,25 @@
+import React, { useState } from "react";
 import "../App"
-import Todo from "./Todo"
-import { useState } from 'react';
+import Todo from "./TodoItem"
+import TodoForm from "./TodoForm"
 
 function TodoList() {
-    const [todos, setTodos] = useState([
-        { text: "deault pomodoro Text"}
-    ]);
+    const [todos, setTodos] = useState([]);
+
+    const addItem = text => {
+        const newTodos = [...todos, {text}];
+        setTodos(newTodos);
+    };
     
     return (
-        <div className="App">
-            <div class="todo-list">
+        <div className="app">
+            <div className="todo-list">
+                <TodoForm addItem={addItem}/>
                 {todos.map((todo, index) => (
                     <Todo 
                         key={index}
-                        index={index}
-                        todo={todo}
+                        // index={index}
+                        item={todo}
                     />
                 ))}
             </div>
