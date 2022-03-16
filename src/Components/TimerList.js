@@ -1,28 +1,53 @@
 import React, { useState } from 'react';
 import Timer from './Timer';
 
-function TimerList() {
+function TimerList( ) {
     const [isActive, setisActive] = useState(false);
     
-    const startPomodoro = 25
     
-    function toggle() {
+    function startPomodoro() {
         setisActive(!isActive);
+        return 25
+    }
+
+    function startBreak() {
+        setisActive(!isActive);
+    }
+
+    function startTimer() {
+
     }
 
 
     return ( 
         <div>
-            <Timer startPomodoro = {startPomodoro} isActive={isActive}/>
+            <Timer startPomodoro = {() => startPomodoro} startBreak= {startBreak} isActive={isActive}/>
 
             <div className="row">
                 <button 
                     className={`button button-primary button-primary-${isActive ? 'active' : 'inactive'}`} 
-                    onClick={toggle}
+                    onClick={startPomodoro}
                 >
-                        {isActive ? 'Pause' : 'Start'}
+                        {isActive ? 'Pause' : 'Start Pomodoro'}
+                </button>
+            
+                <button 
+                    className={`button button-primary button-primary-${isActive ? 'active' : 'inactive'}`} 
+                    onClick={startBreak}
+                >
+                        'Break'
                 </button>
             </div>
+            {/* <TypeSelect
+                types={types}
+                selected={selectedType}
+                changeType={changeType}
+            />
+            <Controls
+                start={startTimer}
+            /> */}
+
+
         </div>
     );
 }

@@ -3,10 +3,10 @@ import React, { useState, useEffect } from 'react';
 
 function Timer ({startPomodoro, isActive}) {
     // const {initialMinute = 25, initialSeconds = 0} = startPomodoro
-    let initialMinute = startPomodoro
-    let initialSeconds = 0
-    const [seconds, setSeconds] = useState(0);
-    const [minutes, setMinutes] = useState(startPomodoro);
+    // let initialMinute = startPomodoro
+    // let initialSeconds = 0
+    const [seconds, setSeconds] = useState(3);
+    const [minutes, setMinutes] = useState(0);
 
     // function toggle() {
     //     setisActive(!isActive);
@@ -20,7 +20,8 @@ function Timer ({startPomodoro, isActive}) {
                 }
                 if (seconds === 0) {
                     if (minutes === 0) {
-                        clearInterval(myInterval)
+                        setMinutes(5)
+                        // clearInterval(myInterval)
                     } else {
                         setMinutes(minutes - 1);
                         setSeconds(59);
