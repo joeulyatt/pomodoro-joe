@@ -1,5 +1,4 @@
 import React, {useState} from "react";
-import Todo from "./TodoItem";
 
 function TodoForm ({ addItem }) {
     const [val, setVal] = useState("");

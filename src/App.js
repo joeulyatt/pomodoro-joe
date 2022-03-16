@@ -1,10 +1,12 @@
 import './App.css';
 import TodoList from "./Components/TodoList"
+import TimerList from './Components/TimerList';
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
       <TodoList />
+      <TimerList />
     </div>
   );
 }
