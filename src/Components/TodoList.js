@@ -14,6 +14,18 @@ function TodoList() {
         setTodos(newTodos);
     };
 
+    const completeItem = index => {
+        const newTodos = [...todos];
+        let complete = newTodos[index].isCompleted
+        if (complete) {
+            complete = false
+        }  else {
+            complete = true
+        }
+        newTodos[index].isCompleted = complete
+        setTodos(newTodos);
+    }
+
     const removeItem = index => {
         const newTodos = [...todos];
         newTodos.splice(index, 1);
@@ -29,6 +41,7 @@ function TodoList() {
                         key={index}
                         index={index}
                         item={todo}
+                        completeItem={completeItem}
                         removeItem={removeItem}
                     />
                 ))}
