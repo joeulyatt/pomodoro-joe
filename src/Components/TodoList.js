@@ -4,10 +4,19 @@ import Todo from "./TodoItem"
 import TodoForm from "./TodoForm"
 
 function TodoList() {
-    const [todos, setTodos] = useState([]);
+    const [todos, setTodos] = useState([{
+        text: "Enter A Task Here!",
+        isCompleted: false
+    }]);
 
     const addItem = text => {
         const newTodos = [...todos, {text}];
+        setTodos(newTodos);
+    };
+
+    const removeItem = index => {
+        const newTodos = [...todos];
+        newTodos.splice(index, 1);
         setTodos(newTodos);
     };
     
@@ -18,8 +27,9 @@ function TodoList() {
                 {todos.map((todo, index) => (
                     <Todo 
                         key={index}
-                        // index={index}
+                        index={index}
                         item={todo}
+                        removeItem={removeItem}
                     />
                 ))}
             </div>
