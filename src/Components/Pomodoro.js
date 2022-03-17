@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import Timer from './Timer';
 import TypeSelect from './TypeSelect';
+import pomodoroGif from './Gifs/pomodoro.gif'
+import shortBreakGif from './Gifs/short-break.gif'
+import longBreakGif from './Gifs/long-break.gif'
 
 function Pomodoro (  ) {
     const [timerType, setTimerType] = useState({
@@ -62,6 +65,9 @@ function Pomodoro (  ) {
                 selected={timerType.selectedType}
                 changeType={changeType}
             />
+            {timerType.mins === 25 ? <img src={pomodoroGif} alt="anime cat typing on keyboard"/> : null}
+            {timerType.mins === 5 ? <img src={shortBreakGif} alt="anime girl sleeping on desk"/> : null}
+            {timerType.mins === 15 ? <img src={longBreakGif} alt="anime guy and anime cat eating"/> : null}
         </div>
     );
 }
