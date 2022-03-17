@@ -1,6 +1,6 @@
 import React from 'react';
 
-const TypeSelect = ({ types, changeType, selected }) => (
+const TypeSelect = ({ types, changeType}) => (
     <div className="TypeSelect">
         {types.map((type, index) => (
             <button

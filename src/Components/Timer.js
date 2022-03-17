@@ -1,21 +1,26 @@
 import React, { useState, useEffect } from 'react';
 
-function Timer ({time, isRunning, startTime, resetTime}) {
+function Timer ({time, isRunning, startTime, pauseTime, resetTime, type}) {
     const [seconds, setSeconds] = useState(0);
     const [minutes, setMinutes] = useState(time);
 
 
-    const setter = () => {
+    const start = () => {
         startTime()
-        setMinutes(time)
     }
 
+    const reset = () => {
+        resetTime()
+        setMinutes(time)
+        setSeconds(0)
+    }
 
-    // Updates Time Display & Resets Seconds
+    // Resets Time when timer type is selected 
     useEffect(() => {
         setMinutes(time)
         setSeconds(0)
-    }, [time, isRunning])
+    }, [time, type])
+
 
     useEffect(() => {
         if (isRunning) {
@@ -36,6 +41,8 @@ function Timer ({time, isRunning, startTime, resetTime}) {
             return () => {
                 clearInterval(myInterval);
             };
+        } else if (!isRunning) {
+            return
         }
     }, [isRunning, time, seconds, minutes]);
     
@@ -47,8 +54,9 @@ function Timer ({time, isRunning, startTime, resetTime}) {
                 {seconds}s
             </div>
         <div>
-            <button onClick={setter}>START</button>
-            <button onClick={resetTime}>RESET</button>
+            <button onClick={!isRunning ? start : pauseTime}>START</button>
+            <button onClick={pauseTime}>PAUSE</button>
+            <button onClick={reset}>RESET</button>
         </div>
         </div>
     )

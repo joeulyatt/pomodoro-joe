@@ -6,7 +6,6 @@ function Pomodoro (  ) {
     const [timerType, setTimerType] = useState({
         selectedType: 'Pomodoro',
         mins: 25,
-        seconds: 0,
         isRunning: false
     });
 
@@ -32,12 +31,21 @@ function Pomodoro (  ) {
         });
     };
 
-    const resetTime = () => {
+    const pauseTime = () => {
         setTimerType({
-            isRunning: false,
+            isRunning: timerType ? !timerType : null,
             mins: timerType.mins
         });
     };
+
+    const resetTime = () => {
+        setTimerType({
+            isRunning: !timerType.isRunning,
+            mins: timerType.mins
+        });
+    };
+
+
 
     return ( 
         <div>
@@ -46,7 +54,8 @@ function Pomodoro (  ) {
                 isRunning={timerType.isRunning}
                 startTime={startTime}
                 resetTime={resetTime}
-                changeType={changeType}
+                pauseTime={pauseTime}
+                type={timerType.selectedType}
             />
             <TypeSelect
                 types={types}
