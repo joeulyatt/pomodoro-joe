@@ -40,7 +40,7 @@ function Pomodoro (  ) {
 
     const resetTime = () => {
         setTimerType({
-            isRunning: !timerType.isRunning,
+            isRunning: timerType ? !timerType : null,
             mins: timerType.mins
         });
     };
