@@ -1,19 +1,23 @@
 import React, { useState, useEffect } from 'react';
 
+function Timer ({time, isRunning, startTime}) {
+    const [seconds, setSeconds] = useState(0);
+    const [minutes, setMinutes] = useState(time);
 
-function Timer ({startPomodoro, isActive}) {
-    // const {initialMinute = 25, initialSeconds = 0} = startPomodoro
-    // let initialMinute = startPomodoro
-    // let initialSeconds = 0
-    const [seconds, setSeconds] = useState(3);
-    const [minutes, setMinutes] = useState(0);
 
-    // function toggle() {
-    //     setisActive(!isActive);
-    // }
+    const setter = () => {
+        startTime()
+        setMinutes(time)
+    }
+
+    // Updates Time Display & Resets Seconds
+    useEffect(() => {
+        setMinutes(time)
+        setSeconds(0)
+    }, [time])
 
     useEffect(() => {
-        if (isActive) {
+        if (isRunning) {
             let myInterval = setInterval(() => {
                 if (seconds > 0) {
                     setSeconds(seconds - 1);
@@ -21,7 +25,7 @@ function Timer ({startPomodoro, isActive}) {
                 if (seconds === 0) {
                     if (minutes === 0) {
                         setMinutes(5)
-                        // clearInterval(myInterval)
+                        clearInterval(myInterval)
                     } else {
                         setMinutes(minutes - 1);
                         setSeconds(59);
@@ -32,7 +36,7 @@ function Timer ({startPomodoro, isActive}) {
                 clearInterval(myInterval);
             };
         }
-    });
+    }, [isRunning, time, seconds, minutes]);
     
 
     return (
@@ -41,47 +45,11 @@ function Timer ({startPomodoro, isActive}) {
                 {minutes}m
                 {seconds}s
             </div>
-
+        <div>
+            <button onClick={setter}>START</button>
+        </div>
         </div>
     )
 }
 
 export default Timer;
-
-
-// function Timer({ startPomodoro }) {
-//     const {initialMinute = 25, initialSeconds = 0} = startPomodoro
-//     const [ minutes, setMinutes ] = useState(initialMinute);
-//     const [ seconds, setSeconds ] = useState(initialSeconds);
-    
-
-//         useEffect(() => {
-//             let myInterval = setInterval(() => {
-//                 if (seconds > 0) {
-//                     setSeconds(seconds - 1);
-//                 }
-//                 if (seconds === 0) {
-//                     if (minutes === 0) {
-//                         clearInterval(myInterval)
-//                     } else {
-//                         setMinutes(minutes - 1);
-//                         setSeconds(59);
-//                     }
-//                 }
-//             }, 1000)
-//             return () => {
-//                 clearInterval(myInterval);
-//             };
-//         });
-
-//     return (
-//         <div>
-//             {/* <button onClick={StartTimer}>Start Timer</button> */}
-//             {minutes === 0 && seconds === 0
-//                 ? null
-//                 : <h1> {minutes} : {seconds < 10 ? `0${seconds}` : seconds}</h1>
-//             }
-//         </div>
-//     );
-// }
-
