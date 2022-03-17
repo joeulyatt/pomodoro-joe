@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-function Timer ({time, isRunning, startTime}) {
+function Timer ({time, isRunning, startTime, resetTime}) {
     const [seconds, setSeconds] = useState(0);
     const [minutes, setMinutes] = useState(time);
 
@@ -9,6 +9,7 @@ function Timer ({time, isRunning, startTime}) {
         startTime()
         setMinutes(time)
     }
+
 
     // Updates Time Display & Resets Seconds
     useEffect(() => {
@@ -47,6 +48,7 @@ function Timer ({time, isRunning, startTime}) {
             </div>
         <div>
             <button onClick={setter}>START</button>
+            <button onClick={resetTime}>RESET</button>
         </div>
         </div>
     )

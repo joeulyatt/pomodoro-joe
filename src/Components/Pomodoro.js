@@ -32,12 +32,20 @@ function Pomodoro (  ) {
         });
     };
 
+    const resetTime = () => {
+        setTimerType({
+            isRunning: false,
+            mins: timerType.mins
+        });
+    };
+
     return ( 
         <div>
             <Timer
                 time={timerType.mins}
                 isRunning={timerType.isRunning}
                 startTime={startTime}
+                resetTime={resetTime}
                 changeType={changeType}
             />
             <TypeSelect
