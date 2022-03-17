@@ -6,7 +6,10 @@ function Timer ({time, isRunning, startTime, pauseTime, resetTime, type}) {
     const [seconds, setSeconds] = useState(0);
     const [minutes, setMinutes] = useState(time);
 
-
+    const printTime = `${minutes}:${seconds <=10 ? ("0"+seconds) : seconds}`
+    
+    document.title = printTime
+    
     const start = () => {
         startTime()
     }
@@ -52,8 +55,7 @@ function Timer ({time, isRunning, startTime, pauseTime, resetTime, type}) {
     return (
         <div>
             <div className="time">
-                {minutes}m
-                {seconds}s
+                {printTime}
             </div>
         <div>
             <button onClick={!isRunning ? start : pauseTime}>
