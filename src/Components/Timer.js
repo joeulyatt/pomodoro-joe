@@ -1,19 +1,29 @@
 import React, { useState, useEffect } from 'react';
 
+function Timer ({time, isRunning, startTime, pauseTime, resetTime, type}) {
+    const [seconds, setSeconds] = useState(0);
+    const [minutes, setMinutes] = useState(time);
 
-function Timer ({startPomodoro, isActive}) {
-    // const {initialMinute = 25, initialSeconds = 0} = startPomodoro
-    // let initialMinute = startPomodoro
-    // let initialSeconds = 0
-    const [seconds, setSeconds] = useState(3);
-    const [minutes, setMinutes] = useState(0);
 
-    // function toggle() {
-    //     setisActive(!isActive);
-    // }
+    const start = () => {
+        startTime()
+    }
+
+    const reset = () => {
+        resetTime()
+        setMinutes(time)
+        setSeconds(0)
+    }
+
+    // Resets Time when timer type is selected 
+    useEffect(() => {
+        setMinutes(time)
+        setSeconds(0)
+    }, [time, type])
+
 
     useEffect(() => {
-        if (isActive) {
+        if (isRunning) {
             let myInterval = setInterval(() => {
                 if (seconds > 0) {
                     setSeconds(seconds - 1);
@@ -21,7 +31,7 @@ function Timer ({startPomodoro, isActive}) {
                 if (seconds === 0) {
                     if (minutes === 0) {
                         setMinutes(5)
-                        // clearInterval(myInterval)
+                        clearInterval(myInterval)
                     } else {
                         setMinutes(minutes - 1);
                         setSeconds(59);
@@ -31,8 +41,10 @@ function Timer ({startPomodoro, isActive}) {
             return () => {
                 clearInterval(myInterval);
             };
+        } else if (!isRunning) {
+            return
         }
-    });
+    }, [isRunning, time, seconds, minutes]);
     
 
     return (
@@ -41,47 +53,13 @@ function Timer ({startPomodoro, isActive}) {
                 {minutes}m
                 {seconds}s
             </div>
-
+        <div>
+            <button onClick={!isRunning ? start : pauseTime}>START</button>
+            <button onClick={pauseTime}>PAUSE</button>
+            <button onClick={reset}>RESET</button>
+        </div>
         </div>
     )
 }
 
 export default Timer;
-
-
-// function Timer({ startPomodoro }) {
-//     const {initialMinute = 25, initialSeconds = 0} = startPomodoro
-//     const [ minutes, setMinutes ] = useState(initialMinute);
-//     const [ seconds, setSeconds ] = useState(initialSeconds);
-    
-
-//         useEffect(() => {
-//             let myInterval = setInterval(() => {
-//                 if (seconds > 0) {
-//                     setSeconds(seconds - 1);
-//                 }
-//                 if (seconds === 0) {
-//                     if (minutes === 0) {
-//                         clearInterval(myInterval)
-//                     } else {
-//                         setMinutes(minutes - 1);
-//                         setSeconds(59);
-//                     }
-//                 }
-//             }, 1000)
-//             return () => {
-//                 clearInterval(myInterval);
-//             };
-//         });
-
-//     return (
-//         <div>
-//             {/* <button onClick={StartTimer}>Start Timer</button> */}
-//             {minutes === 0 && seconds === 0
-//                 ? null
-//                 : <h1> {minutes} : {seconds < 10 ? `0${seconds}` : seconds}</h1>
-//             }
-//         </div>
-//     );
-// }
-

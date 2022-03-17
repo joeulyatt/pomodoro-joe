@@ -1,12 +1,12 @@
 import './App.css';
 import TodoList from "./Components/TodoList"
-import TimerList from './Components/TimerList';
+import Pomodoro from './Components/Pomodoro';
 
 function App() {
   return (
     <div className="app">
       <TodoList />
-      <TimerList />
+      <Pomodoro />
     </div>
   );
 }
