@@ -14,7 +14,7 @@ function Timer ({time, isRunning, startTime}) {
     useEffect(() => {
         setMinutes(time)
         setSeconds(0)
-    }, [time])
+    }, [time, isRunning])
 
     useEffect(() => {
         if (isRunning) {
