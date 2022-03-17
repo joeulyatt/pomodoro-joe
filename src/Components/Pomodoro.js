@@ -4,6 +4,7 @@ import TypeSelect from './TypeSelect';
 import pomodoroGif from './Gifs/pomodoro.gif'
 import shortBreakGif from './Gifs/short-break.gif'
 import longBreakGif from './Gifs/long-break.gif'
+import ReactPlayer from "react-player"
 
 function Pomodoro (  ) {
     const [timerType, setTimerType] = useState({
@@ -68,6 +69,17 @@ function Pomodoro (  ) {
             {timerType.mins === 25 ? <img src={pomodoroGif} alt="anime cat typing on keyboard"/> : null}
             {timerType.mins === 5 ? <img src={shortBreakGif} alt="anime girl sleeping on desk"/> : null}
             {timerType.mins === 15 ? <img src={longBreakGif} alt="anime guy and anime cat eating"/> : null}
+            <ReactPlayer
+                config={{
+                    soundcloud: {
+                    options: { show_user: false }
+                    }
+                }}            
+                url="https://soundcloud.com/chillhopdotcom/sets/lofihiphop?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+                // controls={true}
+                height="500px"
+                width="200px"
+            />
         </div>
     );
 }

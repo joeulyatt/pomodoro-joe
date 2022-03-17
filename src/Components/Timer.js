@@ -8,7 +8,7 @@ function Timer ({time, isRunning, startTime, pauseTime, resetTime, type}) {
 
     const printTime = `${minutes}:${seconds <=10 ? ("0"+seconds) : seconds}`
     
-    document.title = printTime
+    document.title = printTime + " Pomodoro Joe"
     
     const start = () => {
         startTime()
