@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { FaPause, FaPlay } from 'react-icons/fa';
 import { GrPowerReset } from 'react-icons/gr'
+import Button from 'react-bootstrap/Button';
 
 function Timer ({time, isRunning, startTime, pauseTime, resetTime, type}) {
     const [seconds, setSeconds] = useState(0);
@@ -53,15 +54,18 @@ function Timer ({time, isRunning, startTime, pauseTime, resetTime, type}) {
     
 
     return (
-        <div>
+        <div className="timer">
             <div className="time">
                 {printTime}
             </div>
-        <div>
-            <button onClick={!isRunning ? start : pauseTime}>
-            {!isRunning ? <FaPlay />  : <FaPause/>}</button>
-            <button onClick={reset}><GrPowerReset/></button>
-        </div>
+            <div className= "controls">
+                <Button 
+                    onClick={!isRunning ? start : pauseTime}
+                    className={!isRunning ? "paused" : "play"}>
+                {!isRunning ? <FaPlay />  : <FaPause/>}</Button>
+                <Button onClick={reset}><GrPowerReset/></Button>
+                
+            </div>
         </div>
     )
 }

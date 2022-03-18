@@ -4,6 +4,7 @@ import Todo from "./TodoItem"
 import TodoForm from "./TodoForm"
 
 function TodoList() {
+
     const [todos, setTodos] = useState([{
         text: "Enter A Task Here!",
         isCompleted: false
@@ -31,20 +32,22 @@ function TodoList() {
         newTodos.splice(index, 1);
         setTodos(newTodos);
     };
+
+
     
     return (
-        <div className="app">
+        <div>
             <div className="todo-list">
-                <TodoForm addItem={addItem}/>
-                {todos.map((todo, index) => (
-                    <Todo 
-                        key={index}
-                        index={index}
-                        item={todo}
-                        completeItem={completeItem}
-                        removeItem={removeItem}
-                    />
-                ))}
+                    <TodoForm addItem={addItem}/>
+                    {todos.map((todo, index) => (
+                        <Todo
+                            key={index}
+                            index={index}
+                            item={todo}
+                            completeItem={completeItem}
+                            removeItem={removeItem}
+                        />
+                    ))}
             </div>
         </div>
     );

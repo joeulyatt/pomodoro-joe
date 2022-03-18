@@ -1,78 +1,158 @@
-/* .app {
-  background: #209cee;
-  height: 100vh;
-  padding: 30px;
-} */
+/* General Styling */
 
-.todo-list {
-  background: #e8e8e8;
-  border-radius: 4px;
-  max-width: 400px;
-  padding: 5px;
-}
-
-.todo {
-  align-items: center;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  color:#848484;
-  background: #fff;
-  border-radius: 3px;
-  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
-  display: flex;
-  font-size: 12px;
-  justify-content: space-between;
-  margin-bottom: 6px;
-  padding: 3px 10px;
-}
-
-
-/* timer style */
-
-
-/* .app {
+.app {
   text-align: center;
-  background-color: #282c34;
+  background-color: #00B1D2FF;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
+  color: #FDDB27FF;
+  font-family: 'Hubballi', cursive;
+}
+
+.pomodoro h1 {
+  font-size: 6rem;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+
+/* Gifs style */
+.gifs {
+  margin-top: 30px;
+}
+
+
+
+/* Todo Style */
+
+.todo-list {
+  /* background: #00B1D2FF; */
+  border-radius: 4px;
+  max-width: 1200px;
+  padding: 5px;
+}
+
+.todo-list form input {
+  margin-bottom: 20px;
+  border-radius: 10px;
+  color: #00B1D2FF;
+  border-style: none;
+}
+
+.todo {
+  align-items: center;
+  color:#00B1D2FF;
+  background: #fff;
+  border-radius: 3px;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
+  display: flex;
+  font-size: 3rempx;
+  justify-content: space-between;
+  margin-bottom: 6px;
+  padding: 22px 23px;
+}
+
+.todo button {
+  padding: 0px 8px;
+  margin-left: 20px;
+  background-color: #00B1D2FF;
   color: white;
-} */
+  border-style: none;
+}
+
+/* Offcanvas Style */
+.offcanvas-body{
+  background: #FDDB27FF;
+  /* font-family: 'Hubballi', cursive; */
+  font-size: 1.2rem;
+}
+
+
+/* timer style */
+
 
 .time {
-  font-size: 3rem;
-  padding: 2rem;
+  font-size: 7rem; 
 }
 
-.button {
-  padding: .6rem 1.5rem;
-  margin: .4rem;
-  border-radius: 3px;
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: .8rem;
-  border-style: groove;
+
+/*  Control Style */
+
+.controls Button{
+  background-color: #FDDB27FF;
+  outline: none;
+  color: black;
+  margin: 20px 20px;
+  width: 200px;
+  font-size: 2rem;
+  border-radius: 30px;
+  border: none;
 }
 
-.button:focus {
-  outline-width: 0;
+
+.selectType .btn   {
+  font-size: 2rem;
+  background-color: #FDDB27FF;
+  border-radius: 30px;
+  padding: 10px 50px;
+  /* margin-bottom: 40px; */
+  margin: 0px 15px 20px 15px;
 }
 
-.button-primary:hover {
-  background-color: #2641d4;
-  border: 1px solid #1b1f2b;
+.myOffCanvas button {
+  font-size: 2rem;
+  background-color: #FDDB27FF;
+  border-color: #FDDB27FF;
+  color: black;
+  border-radius: 30px;
+  padding: 10px 50px;
+  /* margin-bottom: 40px; */
+  margin-top: 15px;
+  box-shadow:none;
 }
 
-.button-primary-active {
-  background-color: #3151ff;
-  border: 1px solid #152684;
-  color: white;
+.myOffCanvas button:focus {
+  background-color: #FDDB27FF;
+  border-color: #FDDB27FF;
+  box-shadow:none;
 }
 
-.button-primary-inactive {
-  background-color: #3151ff;
-  border: 1px solid #152684;
-  color: white;
+.selectType .btn {
+  border: none;
+}
+
+.controls Button:focus {
+  background-color:#FDDB27FF;
+  box-shadow: none;
+  color: black;
+}
+
+.controls Button:hover, .myOffCanvas button:hover {
+  background-color: rgb(255, 244, 189);
+  border-color: #FDDB27FF;
+  color:black;
+}
+
+.controls Button {
+  box-shadow:none;
+}
+
+.controls .btn:focus  {
+  border-color:rgb(255, 255, 255);
+  color: black;
+  box-shadow: none;
+}
+/* .controls .paused {
+  background-color: rgb(255, 244, 189);
+  color: black;
+} */
+
+
+
+.select-type .btn-outline-success {
+  border-color: none;
 }
