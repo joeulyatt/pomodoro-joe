@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import ToggleButton from 'react-bootstrap/ToggleButton'
+import ToggleButton from 'react-bootstrap/ToggleButton';
 
-function TypeSelect({ types, changeType }) {
+const TypeSelect = ({ types, changeType }) => {
     const [radioValue, setRadioValue] = useState('1');
 
-    // Maps over Types array in ./Pomodoro and mounts radio buttons
+// Maps over Types array in ./Pomodoro and mounts radio buttons
     return (
         <div className ="container selectType">
             {types.map((type, idx) => (
