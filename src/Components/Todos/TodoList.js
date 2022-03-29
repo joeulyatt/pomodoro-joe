@@ -1,11 +1,10 @@
 import React, { useState } from "react";
-import "../App"
 import Todo from "./TodoItem"
 import TodoForm from "./TodoForm"
 
 function TodoList() {
     const [todos, setTodos] = useState([{
-        text: "Enter A Task Here!",
+        text: "Enter A Task Above!",
         isCompleted: false
     }]);
 
@@ -24,27 +23,27 @@ function TodoList() {
         }
         newTodos[index].isCompleted = complete
         setTodos(newTodos);
-    }
+    };
 
     const removeItem = index => {
         const newTodos = [...todos];
         newTodos.splice(index, 1);
         setTodos(newTodos);
     };
-    
+
     return (
-        <div className="app">
+        <div>
             <div className="todo-list">
-                <TodoForm addItem={addItem}/>
-                {todos.map((todo, index) => (
-                    <Todo 
-                        key={index}
-                        index={index}
-                        item={todo}
-                        completeItem={completeItem}
-                        removeItem={removeItem}
-                    />
-                ))}
+                    <TodoForm addItem={addItem}/>
+                    {todos.map((todo, index) => (
+                        <Todo
+                            key={index}
+                            index={index}
+                            item={todo}
+                            completeItem={completeItem}
+                            removeItem={removeItem}
+                        />
+                    ))}
             </div>
         </div>
     );
