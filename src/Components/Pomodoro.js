@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
-
 import Timer from './Timer';
 import TypeSelect from './TypeSelect';
-import pomodoroGif from './Gifs/pomodoro.gif'
-import shortBreakGif from './Gifs/short-break.gif'
-import longBreakGif from './Gifs/long-break.gif'
 import Sidebar from './Todos/OffCanvas';
+import pomodoroGif from './Gifs/pomodoro.gif';
+import shortBreakGif from './Gifs/short-break.gif';
+import longBreakGif from './Gifs/long-break.gif';
 
-function Pomodoro () {
+const Pomodoro = () => {
     const [timerType, setTimerType] = useState({
         selectedType: 'Pomodoro',
         mins: 25,
@@ -17,9 +16,8 @@ function Pomodoro () {
     const types = [
         {name: 'Pomodoro', mins: 25, value: '1'},
         {name: 'Short Break', mins: 5, value: '2'},
-        {name: 'Long Break', mins: 15, value: '3'},
+        {name: 'Long Break', mins: 15, value: '3'}
     ];
-
 
     const changeType = type => {
         setTimerType({
@@ -50,12 +48,9 @@ function Pomodoro () {
         });
     };
 
-
-
     return ( 
         <div className="pomodoro">
             <h1>Pomodoro Joe</h1>
-
             <TypeSelect
                 types={types}
                 selected={timerType.selectedType}
@@ -67,7 +62,6 @@ function Pomodoro () {
                 {timerType.mins === 15 ? <img src={longBreakGif} height="380px" alt="anime guy and anime cat eating"/> : null}
             </div>
             <Sidebar/>
-
             <Timer
                 time={timerType.mins}
                 isRunning={timerType.isRunning}
@@ -76,9 +70,6 @@ function Pomodoro () {
                 pauseTime={pauseTime}
                 type={timerType.selectedType}
             />
-
-
-
         </div>
     );
 };
