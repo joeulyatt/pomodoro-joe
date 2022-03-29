@@ -8,18 +8,17 @@ function Timer ({time, isRunning, startTime, pauseTime, resetTime, type}) {
     const [minutes, setMinutes] = useState(time);
 
     const printTime = `${minutes}:${seconds <=10 ? ("0"+seconds) : seconds}`
-    
     document.title = printTime + " Pomodoro Joe"
     
     const start = () => {
         startTime()
-    }
+    };
 
     const reset = () => {
         resetTime()
         setMinutes(time)
         setSeconds(0)
-    }
+    };
 
     // Resets Time when timer type is selected 
     useEffect(() => {
@@ -27,7 +26,7 @@ function Timer ({time, isRunning, startTime, pauseTime, resetTime, type}) {
         setSeconds(0)
     }, [time, type])
 
-
+    // Starts timer, auto-selects break when Pomodoro is over
     useEffect(() => {
         if (isRunning) {
             let myInterval = setInterval(() => {
@@ -67,7 +66,7 @@ function Timer ({time, isRunning, startTime, pauseTime, resetTime, type}) {
                 
             </div>
         </div>
-    )
-}
+    );
+};
 
 export default Timer;

@@ -1,12 +1,10 @@
 import React, { useState } from "react";
-import "../App"
 import Todo from "./TodoItem"
 import TodoForm from "./TodoForm"
 
 function TodoList() {
-
     const [todos, setTodos] = useState([{
-        text: "Enter A Task Here!",
+        text: "Enter A Task Above!",
         isCompleted: false
     }]);
 
@@ -25,7 +23,7 @@ function TodoList() {
         }
         newTodos[index].isCompleted = complete
         setTodos(newTodos);
-    }
+    };
 
     const removeItem = index => {
         const newTodos = [...todos];
@@ -33,8 +31,6 @@ function TodoList() {
         setTodos(newTodos);
     };
 
-
-    
     return (
         <div>
             <div className="todo-list">

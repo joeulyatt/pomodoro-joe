@@ -20,6 +20,6 @@ function TodoForm ({ addItem }) {
             />
         </form>
     );
-}
+};
 
 export default TodoForm;

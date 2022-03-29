@@ -5,8 +5,10 @@ import ReactPlayer from 'react-player';
 function App() {
   return (
     <div className="app">
+      {/* invisible div is for right-alinging ReactPlayer with flex */}
+      <div className="invisible"/>
       <Pomodoro />
-      <ReactPlayer
+      <ReactPlayer className="react-player"
                 config={{
                     soundcloud: {
                     options: { show_user: false }

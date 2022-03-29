@@ -4,6 +4,7 @@ import ToggleButton from 'react-bootstrap/ToggleButton'
 function TypeSelect({ types, changeType }) {
     const [radioValue, setRadioValue] = useState('1');
 
+    // Maps over Types array in ./Pomodoro and mounts radio buttons
     return (
         <div className ="container selectType">
             {types.map((type, idx) => (
@@ -23,21 +24,6 @@ function TypeSelect({ types, changeType }) {
             ))}
         </div>
     );
-}
+};
 
 export default TypeSelect;
-
-
-
-// const TypeSelect = ({ types, changeType}) => (
-//     <div className="TypeSelect">
-//         {types.map((type, index) => (
-//             <button
-//                 key={type.name}
-//                 onClick={() => changeType(type)}
-//             >
-//             {type.name}
-//             </button>
-//         ))}
-//     </div>
-// );

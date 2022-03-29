@@ -5,9 +5,9 @@ import TypeSelect from './TypeSelect';
 import pomodoroGif from './Gifs/pomodoro.gif'
 import shortBreakGif from './Gifs/short-break.gif'
 import longBreakGif from './Gifs/long-break.gif'
-import Sidebar from './OffCanvas';
+import Sidebar from './Todos/OffCanvas';
 
-function Pomodoro (  ) {
+function Pomodoro () {
     const [timerType, setTimerType] = useState({
         selectedType: 'Pomodoro',
         mins: 25,
@@ -61,12 +61,13 @@ function Pomodoro (  ) {
                 selected={timerType.selectedType}
                 changeType={changeType}
             />
-            <div class="gifs">
+            <div className="gifs">
                 {timerType.mins === 25 ? <img src={pomodoroGif} height="380px" alt="anime cat typing on keyboard"/> : null}
                 {timerType.mins === 5 ? <img src={shortBreakGif} height="380px" alt="anime girl sleeping on desk"/> : null}
                 {timerType.mins === 15 ? <img src={longBreakGif} height="380px" alt="anime guy and anime cat eating"/> : null}
             </div>
             <Sidebar/>
+
             <Timer
                 time={timerType.mins}
                 isRunning={timerType.isRunning}
@@ -77,8 +78,9 @@ function Pomodoro (  ) {
             />
 
 
+
         </div>
     );
-}
+};
 
 export default Pomodoro;

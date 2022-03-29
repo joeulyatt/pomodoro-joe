@@ -10,8 +10,8 @@ const options = [
             backdrop: false,
         }
     ];
-  
-  function OffCanvasExample({ name, ...props }) {
+
+function OffCanvasExample({ name, ...props }) {
     const [show, setShow] = useState(false); 
     const handleClose = () => setShow(false);
     const toggleShow = () => setShow((s) => !s);
@@ -33,16 +33,16 @@ const options = [
             </Offcanvas>
         </div>
     );
-  }
-  
-  function SideBar() {
+};
+
+function SideBar() {
         return (
-        <div>
-            {options.map((props, idx) => (
-            <OffCanvasExample key={idx} {...props} />
-            ))}
-        </div>
+            <div>
+                {options.map((props, idx) => (
+                <OffCanvasExample key={idx} {...props} />
+                ))}
+            </div>
         );
-    }
-  
+};
+
 export default SideBar;
