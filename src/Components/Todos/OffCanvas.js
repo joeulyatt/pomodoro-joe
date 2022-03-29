@@ -1,47 +1,43 @@
 import React, {useState} from 'react';
-import Button from 'react-bootstrap/Button'
-import Offcanvas from 'react-bootstrap/OffCanvas'
+import Button from 'react-bootstrap/Button';
+import Offcanvas from 'react-bootstrap/OffCanvas';
 import TodoList from './TodoList';
 
-const options = [
-        {
-            name: 'Disable backdrop',
-            scroll: true,
-            backdrop: false,
-        }
-    ];
-
-function OffCanvasExample({ name, ...props }) {
+const MyOffCanvas = () => {
     const [show, setShow] = useState(false); 
     const handleClose = () => setShow(false);
     const toggleShow = () => setShow((s) => !s);
 
     return (
         <div className="myOffCanvas">
-            <Button onClick={toggleShow} className="me-2">
-                Set Some Tasks
-            </Button>
-            
-            <Offcanvas show={show} onHide={handleClose} {...props}>
+            <Button onClick={toggleShow} className="me-2">Set Some Tasks</Button>
+            <Offcanvas show={show} onHide={handleClose}>
                 <Offcanvas.Header closeButton>
-                <Offcanvas.Title>Set Your Tasks Here</Offcanvas.Title>
+                    <Offcanvas.Title>Set Your Tasks Here</Offcanvas.Title>
                 </Offcanvas.Header>
                 <Offcanvas.Body>
-
-                <TodoList/>
+                    <TodoList/>
                 </Offcanvas.Body>
             </Offcanvas>
         </div>
     );
 };
 
-function SideBar() {
+const SideBar = () => {
+        const options = [
+            {
+                name: 'Disable backdrop',
+                scroll: true,
+                backdrop: false,
+            }
+        ];
+
         return (
-            <div>
+            <>
                 {options.map((props, idx) => (
-                <OffCanvasExample key={idx} {...props} />
+                <MyOffCanvas key={idx} />
                 ))}
-            </div>
+            </>
         );
 };
 
