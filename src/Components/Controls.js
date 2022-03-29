@@ -1,11 +1,5 @@
 import React from 'react';
 
-function Controls ({ startTime }) {
-    return(
-        <div>
-            <button onClick={startTime}>START</button>
-        </div>
-    );
-};
+const Controls = ({ startTime }) => <button onClick={startTime}>START</button>
 
 export default Controls;
