@@ -1,17 +1,17 @@
 import React from "react";
 
-function Todo ({ item, index, removeItem, completeItem }) {
+const Todo = ({ item, index, removeItem, completeItem }) => {
     return (
-    <div
-        className="todo"
-        style={{textDecoration: item.isCompleted ? "line-through" : ""}}
-    >
+        <div
+            className="todo"
+            style={{textDecoration: item.isCompleted ? "line-through" : ""}}
+        >
             {item.text}
             <div>
                 <button onClick={() => completeItem(index)}>✓</button>
                 <button onClick={() => removeItem(index)}>X</button>
             </div>
-    </div>
+        </div>
     );
 };
 
