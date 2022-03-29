@@ -2,7 +2,7 @@ import './App.css';
 import Pomodoro from './Components/Pomodoro';
 import ReactPlayer from 'react-player';
 
-function App() {
+const App = () => {
   return (
     <div className="app">
       {/* invisible div is for right-alinging ReactPlayer with flex */}
@@ -21,6 +21,6 @@ function App() {
             />
     </div>
   );
-}
+};
 
 export default App;
