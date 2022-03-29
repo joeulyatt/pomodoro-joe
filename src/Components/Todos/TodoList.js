@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import Todo from "./TodoItem"
-import TodoForm from "./TodoForm"
+import Todo from "./TodoItem";
+import TodoForm from "./TodoForm";
 
-function TodoList() {
+const TodoList = () => {
     const [todos, setTodos] = useState([{
         text: "Enter A Task Above!",
         isCompleted: false
@@ -18,10 +18,10 @@ function TodoList() {
         let complete = newTodos[index].isCompleted
         if (complete) {
             complete = false
-        }  else {
+        } else {
             complete = true
-        }
-        newTodos[index].isCompleted = complete
+        };
+        newTodos[index].isCompleted = complete;
         setTodos(newTodos);
     };
 
@@ -32,19 +32,17 @@ function TodoList() {
     };
 
     return (
-        <div>
-            <div className="todo-list">
-                    <TodoForm addItem={addItem}/>
-                    {todos.map((todo, index) => (
-                        <Todo
-                            key={index}
-                            index={index}
-                            item={todo}
-                            completeItem={completeItem}
-                            removeItem={removeItem}
-                        />
-                    ))}
-            </div>
+        <div className="todo-list">
+            <TodoForm addItem={addItem}/>
+            {todos.map((todo, index) => (
+                <Todo
+                    key={index}
+                    index={index}
+                    item={todo}
+                    completeItem={completeItem}
+                    removeItem={removeItem}
+                />
+            ))}
         </div>
     );
 }
