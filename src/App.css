@@ -1,78 +1,301 @@
-/* .app {
-  background: #209cee;
-  height: 100vh;
-  padding: 30px;
-} */
+/* General Styling */
+
+.app {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: calc(10px + 2vmin);
+  color: #FDDB27FF;
+  font-family: 'Hubballi', cursive;
+  background-color: #00B1D2FF;
+}
+
+#root {
+  min-height: 100vh;
+  background-color: #00B1D2FF;
+}
+
+.body {
+  background-color: #00B1D2FF;
+  /* min-height: 100vh; */
+}
+
+.pomodoro h1 {
+  font-size: 6rem;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.invisible {
+  width: 200px;
+  height: 500px;
+  background-color: #00B1D2FF;
+  margin-left: 20px;
+}
+
+
+
+/* Todo Style */
 
 .todo-list {
-  background: #e8e8e8;
+  /* background: #00B1D2FF; */
   border-radius: 4px;
-  max-width: 400px;
+  max-width: 1200px;
   padding: 5px;
+}
+
+.todo-list form input {
+  margin-bottom: 20px;
+  border-radius: 10px;
+  color: #00B1D2FF;
+  border-style: none;
 }
 
 .todo {
   align-items: center;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  color:#848484;
+  color:#00B1D2FF;
   background: #fff;
   border-radius: 3px;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
   display: flex;
-  font-size: 12px;
+  font-size: 3rempx;
   justify-content: space-between;
   margin-bottom: 6px;
-  padding: 3px 10px;
+  padding: 22px 23px;
+}
+
+.todo button {
+  padding: 0px 8px;
+  margin-left: 20px;
+  background-color: #00B1D2FF;
+  color: white;
+  border-style: none;
+}
+
+
+/* Gifs style */
+.gifs {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+/* Soundcloud Style */
+
+.react-player {
+  margin-right: 20px;
+  margin-top: 55px;
+}
+
+
+
+/* Offcanvas Style */
+.offcanvas-body{
+  background: #FDDB27FF;
+  /* font-family: 'Hubballi', cursive; */
+  font-size: 1.2rem;
+}
+
+.myOffCanvas {
+  margin-top: 10px;
 }
 
 
 /* timer style */
 
 
-/* .app {
-  text-align: center;
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-} */
-
-.time {
-  font-size: 3rem;
-  padding: 2rem;
+.timer .time {
+  font-size: 6.7rem; 
+  margin: -22px;
 }
 
-.button {
-  padding: .6rem 1.5rem;
-  margin: .4rem;
-  border-radius: 3px;
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: .8rem;
-  border-style: groove;
+
+/*  Control Style */
+
+.controls Button{
+  background-color: #FDDB27FF;
+  outline: none;
+  color: black;
+  margin: 20px 20px;
+  width: 200px;
+  font-size: 2rem;
+  border-radius: 30px;
+  border: none;
 }
 
-.button:focus {
-  outline-width: 0;
+
+.selectType .btn   {
+  font-size: 2rem;
+  background-color: #FDDB27FF;
+  border-radius: 30px;
+  padding: 10px 50px;
+  /* margin-bottom: 40px; */
+  margin: 0px 15px 20px 15px;
 }
 
-.button-primary:hover {
-  background-color: #2641d4;
-  border: 1px solid #1b1f2b;
+.myOffCanvas button {
+  font-size: 2rem;
+  background-color: #FDDB27FF;
+  border-color: #FDDB27FF;
+  color: black;
+  border-radius: 30px;
+  padding: 10px 50px;
+  /* margin-bottom: 40px; */
+  margin-top: 15px;
+  box-shadow:none;
 }
 
-.button-primary-active {
-  background-color: #3151ff;
-  border: 1px solid #152684;
-  color: white;
+.myOffCanvas button:focus {
+  background-color: #FDDB27FF;
+  color:black;
+  border-color: #FDDB27FF;
+  box-shadow:none;
 }
 
-.button-primary-inactive {
-  background-color: #3151ff;
-  border: 1px solid #152684;
-  color: white;
+.selectType .btn {
+  border: none;
 }
+
+.controls Button:focus {
+  background-color:#FDDB27FF;
+  box-shadow: none;
+  color: black;
+}
+
+.controls Button:hover, .myOffCanvas button:hover {
+  background-color: rgb(255, 244, 189);
+  border-color: #FDDB27FF;
+  color:black;
+}
+
+.controls Button {
+  box-shadow:none;
+}
+
+.controls .btn:focus  {
+  border-color:rgb(255, 255, 255);
+  color: black;
+  box-shadow: none;
+}
+
+.select-type .btn-outline-success {
+  border-color: none;
+}
+
+
+
+
+
+/* Responsive Design */
+
+@media screen and (max-width: 1500px) {
+
+  .pomodoro h1 {
+    font-size: 4rem;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+
+  .app .react-player {
+    width: 300px;
+    margin-bottom: 20px;
+  }
+
+  .selectType .btn  {
+    font-size: 1.5rem;
+  }
+
+  .gifs {
+    margin-top: 0px;
+    margin-bottom: 10px;
+  }
+
+  .gifs img {
+    height: 300px;
+    /* margin-bottom: 0px; */
+  }
+
+  .myOffCanvas .btn {
+    font-size: 1.3rem;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  .timer .time {
+    font-size: 4.4rem;
+  }
+
+  .controls .btn {
+    font-size: 1.5rem;
+  }
+
+}
+
+@media screen and (max-width: 820px) {
+
+  .app {
+    flex-direction: column;
+  }
+
+  .invisible {
+    display: none;
+  }
+
+  .app .react-player {
+    width: 500px;
+    margin-bottom: 20px;
+  }
+
+}
+
+
+@media screen and (max-width: 480px) {
+
+  .pomodoro h1 {
+    font-size: 3.2rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+
+  .app .react-player {
+    width: 300px;
+    margin-bottom: 20px;
+  }
+
+  .selectType .btn  {
+    font-size: 1.2rem;
+  }
+
+  .gifs {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+
+  .gifs img {
+    height: 250px;
+    /* margin-bottom: 0px; */
+  }
+
+  .myOffCanvas .btn {
+    font-size: 1.2rem;
+    margin-top: 5px;
+    margin-bottom: 14px;
+  }
+
+  .controls .btn {
+    font-size: 1.5rem;
+    width: 150px;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .timer .time {
+    font-size: 4.4rem;
+  }
+
+
+  }
+  

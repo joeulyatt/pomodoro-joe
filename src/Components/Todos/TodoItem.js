@@ -8,7 +8,7 @@ function Todo ({ item, index, removeItem, completeItem }) {
     >
             {item.text}
             <div>
-                <button onClick={() => completeItem(index)}>Complete</button>
+                <button onClick={() => completeItem(index)}>✓</button>
                 <button onClick={() => removeItem(index)}>X</button>
             </div>
     </div>
