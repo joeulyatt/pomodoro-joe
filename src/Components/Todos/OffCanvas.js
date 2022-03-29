@@ -11,7 +11,7 @@ const MyOffCanvas = () => {
     return (
         <div className="myOffCanvas">
             <Button onClick={toggleShow} className="me-2">Set Some Tasks</Button>
-            <Offcanvas show={show} onHide={handleClose}>
+            <Offcanvas show={show} onHide={handleClose} scroll="true" /*backdrop="false"*/>
                 <Offcanvas.Header closeButton>
                     <Offcanvas.Title>Set Your Tasks Here</Offcanvas.Title>
                 </Offcanvas.Header>
@@ -23,22 +23,4 @@ const MyOffCanvas = () => {
     );
 };
 
-const SideBar = () => {
-        const options = [
-            {
-                name: 'Disable backdrop',
-                scroll: true,
-                backdrop: false,
-            }
-        ];
-
-        return (
-            <>
-                {options.map((props, idx) => (
-                <MyOffCanvas key={idx} />
-                ))}
-            </>
-        );
-};
-
-export default SideBar;
+export default MyOffCanvas;
