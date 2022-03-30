@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Timer from './Timer';
 import TypeSelect from './TypeSelect';
-import Sidebar from './Todos/OffCanvas';
+import Sidebar from './Todos/TodoSideBar';
 import pomodoroGif from './Gifs/pomodoro.gif';
 import shortBreakGif from './Gifs/short-break.gif';
 import longBreakGif from './Gifs/long-break.gif';
