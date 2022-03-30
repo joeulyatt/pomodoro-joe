@@ -4,14 +4,13 @@ import Offcanvas from 'react-bootstrap/OffCanvas';
 import TodoList from './TodoList';
 
 const MyOffCanvas = () => {
-    const [show, setShow] = useState(false); 
-    const handleClose = () => setShow(false);
-    const toggleShow = () => setShow((s) => !s);
-
     const [todos, setTodos] = useState([{
         text: "Enter A Task Above!",
         isCompleted: false
     }]);
+    const [show, setShow] = useState(false); 
+    const handleClose = () => setShow(false);
+    const toggleShow = () => setShow((s) => !s);
 
     const addItem = text => {
         const newTodos = [...todos, {text}];

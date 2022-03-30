@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import Todo from "./TodoItem";
 import TodoForm from "./TodoForm";
 
@@ -18,6 +17,6 @@ const TodoList = ( { todos, addItem, completeItem, removeItem }) => {
             ))}
         </div>
     );
-}
+};
 
 export default TodoList;
