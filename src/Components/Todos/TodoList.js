@@ -17,6 +17,6 @@ const TodoList = ( { todos, addItem, completeItem, removeItem }) => {
             ))}
         </div>
     );
-};
+}
 
 export default TodoList;

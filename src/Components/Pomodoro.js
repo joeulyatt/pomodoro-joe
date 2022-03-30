@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Timer from './Timer';
 import TypeSelect from './TypeSelect';
-import Sidebar from './Todos/TodoSideBar';
+import TodoSideBar from './Todos/TodoSideBar';
 import pomodoroGif from './Gifs/pomodoro.gif';
 import shortBreakGif from './Gifs/short-break.gif';
 import longBreakGif from './Gifs/long-break.gif';
@@ -61,7 +61,7 @@ const Pomodoro = () => {
                 {timerType.mins === 5 ? <img src={shortBreakGif} height="380px" alt="anime girl sleeping on desk"/> : null}
                 {timerType.mins === 15 ? <img src={longBreakGif} height="380px" alt="anime guy and anime cat eating"/> : null}
             </div>
-            <Sidebar/>
+            <TodoSideBar/>
             <Timer
                 time={timerType.mins}
                 isRunning={timerType.isRunning}

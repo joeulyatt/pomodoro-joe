@@ -3,7 +3,7 @@ import Button from 'react-bootstrap/Button';
 import Offcanvas from 'react-bootstrap/OffCanvas';
 import TodoList from './TodoList';
 
-const MyOffCanvas = () => {
+const TodoSideBar = () => {
     const [todos, setTodos] = useState([{
         text: "Enter A Task Above!",
         isCompleted: false
@@ -55,4 +55,4 @@ const MyOffCanvas = () => {
     );
 };
 
-export default MyOffCanvas;
+export default TodoSideBar;
