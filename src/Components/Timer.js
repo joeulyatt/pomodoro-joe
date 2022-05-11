@@ -55,8 +55,12 @@ const Timer = ({time, isRunning, startTime, pauseTime, resetTime, type}) => {
                     onClick={!isRunning ? start : pauseTime}
                     className={!isRunning ? "paused" : "play"}
                 >
-                    {!isRunning ? <FaPlay />  : <FaPause/>}</Button>
-                <Button onClick={reset}><GrPowerReset/></Button>
+                    {!isRunning ? <FaPlay />  : <FaPause/>}
+                </Button>
+                <Button 
+                    className="reset-icon"
+                    onClick={reset}><GrPowerReset/>
+                </Button>
             </div>
         </div>
     );

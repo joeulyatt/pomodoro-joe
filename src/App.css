@@ -10,14 +10,14 @@ html, body {
   align-items: center;
   justify-content: space-between;
   font-size: calc(10px + 2vmin);
-  color: #FDDB27FF;
+  color: #fa8900;
   font-family: 'Hubballi', cursive;
-  background-color: #00B1D2FF;
+  background-color: #0e67b4;
 }
 
 #root {
   min-height: 100vh;
-  background-color: #00B1D2FF;
+  background-color: #0e67b4;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -31,7 +31,7 @@ html, body {
 }
 
 .body {
-  background-color: #00B1D2FF;
+  background-color: #0e67b4;
   /* min-height: 100vh; */
 }
 
@@ -44,7 +44,7 @@ html, body {
 .invisible {
   width: 200px;
   height: 500px;
-  background-color: #00B1D2FF;
+  background-color: #0e67b4;
   margin-left: 20px;
 }
 
@@ -58,7 +58,7 @@ html, body {
 /* Todo Style */
 
 .todo-list {
-  /* background: #00B1D2FF; */
+  /* background: #0e67b4; */
   border-radius: 4px;
   max-width: 1200px;
   padding: 5px;
@@ -67,13 +67,13 @@ html, body {
 .todo-list form input {
   margin-bottom: 20px;
   border-radius: 10px;
-  color: #00B1D2FF;
+  color: #0e67b4;
   border-style: none;
 }
 
 .todo {
   align-items: center;
-  color:#00B1D2FF;
+  color:#0e67b4;
   background: #fff;
   border-radius: 3px;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
@@ -87,9 +87,13 @@ html, body {
 .todo button {
   padding: 0px 8px;
   margin-left: 20px;
-  background-color: #00B1D2FF;
+  background-color: #0e67b4;
   color: white;
   border-style: none;
+}
+
+#root .btn-outline-danger, #root .btn-outline-success {
+  color: white;
 }
 
 
@@ -110,7 +114,7 @@ html, body {
 
 /* Offcanvas Style */
 .offcanvas-body{
-  background: #FDDB27FF;
+  background: #fa8900;
   /* font-family: 'Hubballi', cursive; */
   font-size: 1.2rem;
 }
@@ -126,15 +130,16 @@ html, body {
 .timer .time {
   font-size: 6.7rem; 
   margin: -22px;
+  color: white;
 }
 
 
 /*  Control Style */
 
 .controls Button{
-  background-color: #FDDB27FF;
+  background-color: #fa8900;
   outline: none;
-  color: black;
+  color: white;
   margin: 20px 20px;
   width: 200px;
   font-size: 2rem;
@@ -142,32 +147,58 @@ html, body {
   border: none;
 }
 
+.controls Button:focus {
+  background-color:#fa8900;
+  box-shadow: none;
+  /* color: black; */
+}
+
+/* .reset-icon path {
+  stroke: white;
+} */
+
+
+.controls Button:hover, .myOffCanvas button:hover {
+  background-color: rgb(255, 255, 255);
+  border-color: #ffffff;
+  color:black;
+  stroke: black;
+}
+
+.controls Button {
+  box-shadow:none;
+}
+
+
+
+.controls .btn:focus  {
+  border-color:rgb(255, 255, 255);
+  box-shadow: none;
+}
 
 .selectType .btn   {
   font-size: 2rem;
-  background-color: #FDDB27FF;
+  background-color: #fa8900;
   border-radius: 30px;
   padding: 10px 50px;
-  /* margin-bottom: 40px; */
   margin: 0px 15px 20px 15px;
 }
 
 .myOffCanvas button {
   font-size: 2rem;
-  background-color: #FDDB27FF;
-  border-color: #FDDB27FF;
-  color: black;
+  background-color: #fa8900;
+  border-color: #fa8900;
+  color: white;
   border-radius: 30px;
   padding: 10px 50px;
-  /* margin-bottom: 40px; */
   margin-top: 15px;
   box-shadow:none;
 }
 
 .myOffCanvas button:focus {
-  background-color: #FDDB27FF;
-  color:black;
-  border-color: #FDDB27FF;
+  background-color: #fa8900;
+  color:rgb(255, 255, 255);
+  border-color: #fa8900;
   box-shadow:none;
 }
 
@@ -175,27 +206,6 @@ html, body {
   border: none;
 }
 
-.controls Button:focus {
-  background-color:#FDDB27FF;
-  box-shadow: none;
-  color: black;
-}
-
-.controls Button:hover, .myOffCanvas button:hover {
-  background-color: rgb(255, 244, 189);
-  border-color: #FDDB27FF;
-  color:black;
-}
-
-.controls Button {
-  box-shadow:none;
-}
-
-.controls .btn:focus  {
-  border-color:rgb(255, 255, 255);
-  color: black;
-  box-shadow: none;
-}
 
 .select-type .btn-outline-success {
   border-color: none;
@@ -207,7 +217,7 @@ html, body {
 
 footer {
   text-align: center;
-  color:rgba(173, 239, 209, 0.635);
+  color:white;
   background: black;
   margin: 0px;
   padding: 30px 0px;
@@ -227,7 +237,7 @@ footer a {
 }
 
 footer a:hover {
-  color:rgba(173, 239, 209, 0.635);
+  color: #fa8900;
 }
 
 
@@ -271,6 +281,7 @@ footer a:hover {
 
   .timer .time {
     font-size: 4.4rem;
+    color:white;
   }
 
   .controls .btn {
