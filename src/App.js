@@ -1,10 +1,12 @@
 import './App.css';
 import Pomodoro from './Components/Pomodoro';
 import ReactPlayer from 'react-player';
+import Footer from './Components/Footer';
 
 const App = () => {
   return (
-    <div className="app">
+    <>
+    <div className="app container-fluid">
       {/* invisible div is for right-alinging ReactPlayer with flex */}
       <div className="invisible"/>
       <Pomodoro />
@@ -19,6 +21,8 @@ const App = () => {
                 width="200px"
             />
     </div>
+    <Footer/>
+    </>
   );
 };
 
