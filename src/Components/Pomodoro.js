@@ -5,6 +5,7 @@ import TodoSideBar from './Todos/TodoSideBar';
 import pomodoroGif from './Gifs/pomodoro.gif';
 import shortBreakGif from './Gifs/short-break.gif';
 import longBreakGif from './Gifs/long-break.gif';
+import logo from '../img/logo.png';
 
 const Pomodoro = () => {
     const [timerType, setTimerType] = useState({
@@ -50,7 +51,7 @@ const Pomodoro = () => {
 
     return ( 
         <div className="pomodoro">
-            <h1>Pomodoro Joe</h1>
+            <img src={logo} className="myLogo" alt="Logo"/>
             <TypeSelect
                 types={types}
                 selected={timerType.selectedType}
