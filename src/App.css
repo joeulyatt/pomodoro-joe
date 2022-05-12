@@ -146,18 +146,46 @@ html, body {
   border: none;
 }
 
-.controls Button:focus {
-  background-color:white;
-  box-shadow: none;
-  /* color: black; */
+.controls Button:hover{
+  background-color: rgb(255, 255, 255);
+  color: black;
 }
 
-/* .reset-icon path {
-  stroke: #fa8901;
+.controls .btn:focus  {
+  background-color: rgb(255, 255, 255);
+  color: #000000;
+  box-shadow: none;
+}
+
+#root .play {
+  color:rgb(0, 0, 0);
+}
+
+#root .play:hover {
+  color: #2e2e2ef9;
+}
+
+#root .paused {
+  color: #fa8901;
+}
+
+#root .paused:hover {
+  color: #fa8a01cf;
+}
+
+#root .controls .btn svg:focus  {
+  color: rgb(163, 0, 0);
+  box-shadow: none;
+}
+
+/* .controls .btn-primary:focus {
+  background-color:white;
+  color: #fa8901;
+  box-shadow: none;
 } */
 
 
-.controls Button:hover, .myOffCanvas button:hover {
+.myOffCanvas button:hover {
   background-color: rgb(255, 255, 255);
   border-color: #ffffff;
   color:black;
@@ -170,10 +198,7 @@ html, body {
 
 
 
-.controls .btn:focus  {
-  border-color:rgb(255, 255, 255);
-  box-shadow: none;
-}
+
 
 .selectType .btn   {
   font-size: 2rem;
