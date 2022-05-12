@@ -11,13 +11,13 @@ const Pomodoro = () => {
     const [timerType, setTimerType] = useState({
         selectedType: 'Pomodoro',
         mins: 25,
-        isRunning: false
+        isRunning: false,
     });
 
     const types = [
-        {name: 'Pomodoro', mins: 25, value: '1'},
-        {name: 'Short Break', mins: 5, value: '2'},
-        {name: 'Long Break', mins: 15, value: '3'}
+        { name: 'Pomodoro', mins: 25, value: '1' },
+        { name: 'Short Break', mins: 5, value: '2' },
+        { name: 'Long Break', mins: 15, value: '3' },
     ];
 
     const changeType = type => {
@@ -31,21 +31,21 @@ const Pomodoro = () => {
     const startTime = () => {
         setTimerType({
             isRunning: true,
-            mins: timerType.mins
+            mins: timerType.mins,
         });
     };
 
     const pauseTime = () => {
         setTimerType({
             isRunning: timerType ? !timerType : null,
-            mins: timerType.mins
+            mins: timerType.mins,
         });
     };
 
     const resetTime = () => {
         setTimerType({
             isRunning: timerType ? !timerType : null,
-            mins: timerType.mins
+            mins: timerType.mins,
         });
     };
 
@@ -58,9 +58,9 @@ const Pomodoro = () => {
                 changeType={changeType}
             />
             <div className="gifs">
-                {timerType.mins === 25 ? <img src={pomodoroGif} height="380px" alt="anime cat typing on keyboard"/> : null}
-                {timerType.mins === 5 ? <img src={shortBreakGif} height="380px" alt="anime girl sleeping on desk"/> : null}
-                {timerType.mins === 15 ? <img src={longBreakGif} height="380px" alt="anime guy and anime cat eating"/> : null}
+                {timerType.mins === 25 && <img src={pomodoroGif} height="380px" alt="anime cat typing on keyboard"/>}
+                {timerType.mins === 5 && <img src={shortBreakGif} height="380px" alt="anime girl sleeping on desk"/>}
+                {timerType.mins === 15 && <img src={longBreakGif} height="380px" alt="anime guy and anime cat eating"/>}
             </div>
             <TodoSideBar/>
             <Timer

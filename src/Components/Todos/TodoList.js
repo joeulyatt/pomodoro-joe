@@ -1,11 +1,10 @@
-import Todo from "./TodoItem";
-import TodoForm from "./TodoForm";
+import Todo from './TodoItem';
+import TodoForm from './TodoForm';
 
-const TodoList = ( { todos, addItem, completeItem, removeItem }) => {
-
+const TodoList = ({ todos, addItem, completeItem, removeItem }) => {
     return (
         <div className="todo-list">
-            <TodoForm addItem={addItem}/>
+            <TodoForm addItem={addItem} />
             {todos.map((todo, index) => (
                 <Todo
                     key={index}
@@ -17,6 +16,6 @@ const TodoList = ( { todos, addItem, completeItem, removeItem }) => {
             ))}
         </div>
     );
-}
+};
 
 export default TodoList;

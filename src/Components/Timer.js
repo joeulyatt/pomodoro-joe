@@ -8,11 +8,9 @@ const Timer = ({time, isRunning, startTime, pauseTime, resetTime, type}) => {
     const [minutes, setMinutes] = useState(time);
 
     const printTime = `${minutes}:${seconds <10 ? ("0"+seconds) : seconds}`;
-    document.title = printTime + " Pomodoro Joe";
+    document.title = printTime + " Pomodoro Joe | The only Pomodoro Timer you need";
     
-    const start = () => {
-        startTime()
-    };
+    const start = () => startTime();
 
     const reset = () => {
         resetTime()

@@ -1,13 +1,13 @@
-import React, {useState} from "react";
+import React, { useState } from 'react';
 
 const TodoForm = ({ addItem }) => {
-    const [val, setVal] = useState("");
+    const [val, setVal] = useState('');
 
-    const handleSubmit = e => {
+    const handleSubmit = (e) => {
         e.preventDefault();
         if (!val) return;
         addItem(val);
-        setVal("");
+        setVal('');
     };
 
     return (
@@ -16,7 +16,7 @@ const TodoForm = ({ addItem }) => {
                 type="text"
                 className="input"
                 value={val}
-                onChange={e => setVal(e.target.value)}
+                onChange={(e) => setVal(e.target.value)}
             />
         </form>
     );
