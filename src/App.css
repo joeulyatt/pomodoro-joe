@@ -173,17 +173,11 @@ html, body {
   color: #fa8a01cf;
 }
 
+
 #root .controls .btn svg:focus  {
   color: rgb(163, 0, 0);
   box-shadow: none;
 }
-
-/* .controls .btn-primary:focus {
-  background-color:white;
-  color: #fa8901;
-  box-shadow: none;
-} */
-
 
 .myOffCanvas button:hover {
   background-color: rgb(255, 255, 255);
@@ -195,10 +189,6 @@ html, body {
 .controls Button {
   box-shadow:none;
 }
-
-
-
-
 
 .selectType .btn   {
   font-size: 2rem;
