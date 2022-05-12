@@ -4,10 +4,7 @@ import Offcanvas from 'react-bootstrap/OffCanvas';
 import TodoList from './TodoList';
 
 const TodoSideBar = () => {
-    const [todos, setTodos] = useState([{
-        text: "Enter A Task Above!",
-        isCompleted: false
-    }]);
+    const [todos, setTodos] = useState([]);
     const [show, setShow] = useState(false); 
     const handleClose = () => setShow(false);
     const toggleShow = () => setShow((s) => !s);
