@@ -1,4 +1,6 @@
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.css';
+import "bootstrap";
 import Pomodoro from './Components/Pomodoro';
 import ReactPlayer from 'react-player';
 import Footer from './Components/Footer';
