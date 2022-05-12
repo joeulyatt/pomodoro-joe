@@ -3,7 +3,7 @@ import { AiFillGithub, AiFillTwitterCircle, AiFillLinkedin } from 'react-icons/a
 
 const Footer = () => 
     <footer>
-        <a href="https://github.com/joeulyatt/">
+        <a href="https://github.com/joewhocodes/">
             <AiFillGithub/>
         </a>
         <a href="https://twitter.com/joewhocodes">

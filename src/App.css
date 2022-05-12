@@ -41,6 +41,11 @@ html, body {
   margin-bottom: 20px;
 }
 
+#root h6 {
+  font-family: 'Hubballi', cursive;
+  font-size: 1.5em;
+}
+
 .invisible {
   width: 200px;
   height: 500px;
