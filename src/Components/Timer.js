@@ -49,8 +49,8 @@ const Timer = ({time, isRunning, startTime, pauseTime, resetTime, type}) => {
     
     return (
         <div className="timer">
-            <div className="time">{printTime}</div>
             <div className= "controls">
+            <div className="time">{printTime}</div>
                 <Button 
                     onClick={!isRunning ? start : pauseTime}
                     className={!isRunning ? "paused" : "play"}

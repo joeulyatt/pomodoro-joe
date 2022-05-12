@@ -10,7 +10,7 @@ html, body {
   align-items: center;
   justify-content: space-between;
   font-size: calc(10px + 2vmin);
-  color: #fa8900;
+  color: white;
   font-family: 'Hubballi', cursive;
   background-color: #0e67b4;
 }
@@ -51,14 +51,13 @@ html, body {
 /* Logo Style */
 
 .myLogo {
-  width: min(80vw, 650px);
-  margin: 25px;
+  width: min(80vw, 437px);
+  margin: 15px;
 }
 
 /* Todo Style */
 
 .todo-list {
-  /* background: #0e67b4; */
   border-radius: 4px;
   max-width: 1200px;
   padding: 5px;
@@ -88,11 +87,15 @@ html, body {
   padding: 0px 8px;
   margin-left: 20px;
   background-color: #0e67b4;
-  color: white;
+  color: #fa8901;
   border-style: none;
 }
 
 #root .btn-outline-danger, #root .btn-outline-success {
+  color: #fa8901;
+}
+
+#root .btn-outline-danger:focus {
   color: white;
 }
 
@@ -104,7 +107,6 @@ html, body {
 }
 
 /* Soundcloud Style */
-
 .react-player {
   margin-right: 20px;
   margin-top: 55px;
@@ -115,7 +117,6 @@ html, body {
 /* Offcanvas Style */
 .offcanvas-body{
   background: #fa8900;
-  /* font-family: 'Hubballi', cursive; */
   font-size: 1.2rem;
 }
 
@@ -125,21 +126,19 @@ html, body {
 
 
 /* timer style */
-
-
 .timer .time {
   font-size: 6.7rem; 
   margin: -22px;
-  color: white;
+  color: #fa8901;
 }
 
 
 /*  Control Style */
 
 .controls Button{
-  background-color: #fa8900;
+  background-color: white;
   outline: none;
-  color: white;
+  color: #fa8901;
   margin: 20px 20px;
   width: 200px;
   font-size: 2rem;
@@ -148,13 +147,13 @@ html, body {
 }
 
 .controls Button:focus {
-  background-color:#fa8900;
+  background-color:white;
   box-shadow: none;
   /* color: black; */
 }
 
 /* .reset-icon path {
-  stroke: white;
+  stroke: #fa8901;
 } */
 
 
@@ -178,17 +177,25 @@ html, body {
 
 .selectType .btn   {
   font-size: 2rem;
-  background-color: #fa8900;
+  background-color: white;
   border-radius: 30px;
   padding: 10px 50px;
   margin: 0px 15px 20px 15px;
 }
 
+#root .selectType .btn:hover {
+  color: white;
+}
+
+#root .selectType .btn:focus {
+  color: white;
+}
+
 .myOffCanvas button {
   font-size: 2rem;
-  background-color: #fa8900;
-  border-color: #fa8900;
-  color: white;
+  background-color: white;
+  border-color: white;
+  color: #fa8901;
   border-radius: 30px;
   padding: 10px 50px;
   margin-top: 15px;
@@ -196,9 +203,9 @@ html, body {
 }
 
 .myOffCanvas button:focus {
-  background-color: #fa8900;
-  color:rgb(255, 255, 255);
-  border-color: #fa8900;
+  background-color: white;
+  color: #fa8901;
+  border-color: white;
   box-shadow:none;
 }
 
@@ -217,7 +224,7 @@ html, body {
 
 footer {
   text-align: center;
-  color:white;
+  color:#fa8901;
   background: black;
   margin: 0px;
   padding: 30px 0px;
@@ -230,14 +237,14 @@ footer h6 {
 }
 
 footer a {
-  color: white;
+  color: #fa8901;
   font-size: 2.2rem;
   padding: 0px 5px;
   margin-bottom: 10px;
 }
 
 footer a:hover {
-  color: #fa8900;
+  color: white;
 }
 
 
@@ -281,7 +288,7 @@ footer a:hover {
 
   .timer .time {
     font-size: 4.4rem;
-    color:white;
+    color:#fa8901;
   }
 
   .controls .btn {
