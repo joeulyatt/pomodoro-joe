@@ -5,7 +5,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/joewhocodes/pomodoro-joe">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="/src/img/logo.png" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">Pomodoro Joe</h3>
@@ -57,7 +57,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[![Product Name Screen Shot][product-screenshot]](https://joewhocodes.netlify.app)
 
 Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `joewhocodes`, `pomodoro-joe`, `joewhocodes`, `joewhocodes`, `email_client`, `joewhocodes@gmail.com`, `project_title`, `project_description`
 
