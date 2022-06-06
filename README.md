@@ -1,22 +1,28 @@
 <div id="top"></div>
 
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
 
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
   <a href="https://github.com/joewhocodes/pomodoro-joe">
-    <img src="/src/img/logo.png" alt="Logo" width="200" height="80">
+    <img src="/src/img/logo.png" alt="Logo">
   </a>
 
 <h3 align="center">Pomodoro Joe</h3>
 
   <p align="center">
-    A simple React app to help with self-study., integrating a Todo list, Pomodoro timers and Lofi Soundcloud Widget.
+    A simple React app to help with self-study.
+    <br>
+    Integrating a Todo List, Pomodoro Timer and a Lofi Soundcloud Widget.
+    <br />
     <br />
     <a href="https://github.com/joewhocodes/pomodoro-joe"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/joewhocodes/pomodoro-joe">View Demo</a>
+    <a href="https://pomodoro-joe.netlify.app/">View Demo</a>
     ·
     <a href="https://github.com/joewhocodes/pomodoro-joe/issues">Report Bug</a>
     ·
@@ -48,7 +54,6 @@
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
 
@@ -57,7 +62,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://joewhocodes.netlify.app)
+[![Product Name Screen Shot][product-screenshot]](https://pomodoro-joe.netlify.app/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -79,7 +84,6 @@ To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
 * npm
   ```sh
   npm install npm@latest -g
@@ -103,21 +107,25 @@ This is an example of how to list things you need to use the software and how to
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+Click "Set Some Tasks" to set your Todos for your Pomodoro. Local Storage will remember you Todos when you refresh or come back to the page later.
+<br>
+For information on Pomodoro timers, please refer to https://en.wikipedia.org/wiki/Pomodoro_Technique
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+
+
+<!-- _For more examples, please refer to the [Documentation](https://example.com)_ -->
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
 
 <!-- ROADMAP -->
-## Roadmap
+<!-- ## Roadmap
 
 - [ ] Feature 1
 - [ ] Feature 2
 - [ ] Feature 3
-    - [ ] Nested Feature
+    - [ ] Nested Feature -->
 
 See the [open issues](https://github.com/joewhocodes/pomodoro-joe/issues) for a full list of proposed features (and known issues).
 
@@ -155,20 +163,12 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@joewhocodes](https://twitter.com/joewhocodes) - joewhocodes@gmail.com
+Joe Ulyatt - [@joewhocodes](https://twitter.com/joewhocodes) - joewhocodes@gmail.com
 
 Project Link: [https://github.com/joewhocodes/pomodoro-joe](https://github.com/joewhocodes/pomodoro-joe)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
-
-* []()
-* []()
-* []()
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
