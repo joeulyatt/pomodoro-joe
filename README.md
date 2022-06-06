@@ -5,7 +5,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/joewhocodes/pomodoro-joe">
-    <img src="/src/img/logo.png" alt="Logo" width="80" height="80">
+    <img src="/src/img/logo.png" alt="Logo" width="200" height="80">
   </a>
 
 <h3 align="center">Pomodoro Joe</h3>
@@ -58,8 +58,6 @@
 ## About The Project
 
 [![Product Name Screen Shot][product-screenshot]](https://joewhocodes.netlify.app)
-
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `joewhocodes`, `pomodoro-joe`, `joewhocodes`, `joewhocodes`, `email_client`, `joewhocodes@gmail.com`, `project_title`, `project_description`
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -190,4 +188,4 @@ Project Link: [https://github.com/joewhocodes/pomodoro-joe](https://github.com/j
 [license-url]: https://github.com/joewhocodes/pomodoro-joe/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/joewhocodes
-[product-screenshot]: images/screenshot.png
+[product-screenshot]: /src//img//screenshot.png
