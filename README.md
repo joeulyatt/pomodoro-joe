@@ -5,10 +5,11 @@
 <br />
 <div align="center">
   <a href="https://github.com/joewhocodes/pomodoro-joe">
-    <img src="/src/img/logo.png" alt="Logo" width="80" height="80">
+    <img src="/src/img/logo.png" alt="Logo" width="500" height="80">
   </a>
 
 <h3 align="center">Pomodoro Joe</h3>
+  <br>
 
   <p align="center">
     A simple React app to help with self-study., integrating a Todo list, Pomodoro timers and Lofi Soundcloud Widget.
