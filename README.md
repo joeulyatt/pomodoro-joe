@@ -14,10 +14,10 @@
 <h3 align="center">Pomodoro Joe</h3>
 
   <p align="center">
-    Welcome to the Pomodoro Joe Github repo.
+    A simple React app to help with self-study.
     <br>
-    This Pomodoro timer is aimed to help with self-study or getting big tasks done efficiently.
-    <br />
+    Integrating a Todo List, Pomodoro Timer and a Lofi Soundcloud Widget.
+    </p>
     <br />
     <a href="https://github.com/joewhocodes/pomodoro-joe"><strong>Explore the docs »</strong></a>
     <br />
@@ -65,14 +65,15 @@
 [![Product Name Screen Shot][product-screenshot]](https://pomodoro-joe.netlify.app/)
 
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+</p>
     <p align="center">
-    A simple React app to help with self-study.
+    This Pomodoro Timer app is designed to help with studying, coding, or any other tasks you would like to separate into small chunks.
     <br>
-    Integrating a Todo List, Pomodoro Timer and a Lofi Soundcloud Widget.
+    <br>
+    For information on Pomodoro timers, please refer to https://en.wikipedia.org/wiki/Pomodoro_Technique
     </p>
 
-
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 ### Built With
 
@@ -112,13 +113,18 @@ To get a local copy up and running follow these simple example steps.
 
 <!-- USAGE EXAMPLES -->
 ## Usage
-
-Click "Set Some Tasks" to set your Todos for your Pomodoro. Local Storage will remember you Todos when you refresh or come back to the page later.
+<p>
+Click "Set Some Tasks" to set your Todos for your Pomodoro. The page will remember your Todos when you refresh or come back to the page later.
+<br>
+<br>
+The Pomodoro timer will automatically move onto a 5 minute break when you have completed 25 minutes. It will then move onto a 20 minute break after 4 Pomodoros.
+<br>
+<br>
+Feel free to pause or reset the timer as you please.
 <br>
 <br>
 For information on Pomodoro timers, please refer to https://en.wikipedia.org/wiki/Pomodoro_Technique
-
-
+</p>
 
 <!-- _For more examples, please refer to the [Documentation](https://example.com)_ -->
 
