@@ -14,9 +14,9 @@
 <h3 align="center">Pomodoro Joe</h3>
 
   <p align="center">
-    A simple React app to help with self-study.
+    Welcome to the Pomodoro Joe Github repo.
     <br>
-    Integrating a Todo List, Pomodoro Timer and a Lofi Soundcloud Widget.
+    This Pomodoro timer is aimed to help with self-study or getting big tasks done efficiently.
     <br />
     <br />
     <a href="https://github.com/joewhocodes/pomodoro-joe"><strong>Explore the docs »</strong></a>
@@ -64,7 +64,13 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://pomodoro-joe.netlify.app/)
 
+
 <p align="right">(<a href="#top">back to top</a>)</p>
+    <p align="center">
+    A simple React app to help with self-study.
+    <br>
+    Integrating a Todo List, Pomodoro Timer and a Lofi Soundcloud Widget.
+    </p>
 
 
 
@@ -108,6 +114,7 @@ To get a local copy up and running follow these simple example steps.
 ## Usage
 
 Click "Set Some Tasks" to set your Todos for your Pomodoro. Local Storage will remember you Todos when you refresh or come back to the page later.
+<br>
 <br>
 For information on Pomodoro timers, please refer to https://en.wikipedia.org/wiki/Pomodoro_Technique
 
@@ -170,8 +177,6 @@ Project Link: [https://github.com/joewhocodes/pomodoro-joe](https://github.com/j
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
-<p align="right">(<a href="#top">back to top</a>)</p>
-
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
@@ -185,7 +190,7 @@ Project Link: [https://github.com/joewhocodes/pomodoro-joe](https://github.com/j
 [issues-shield]: https://img.shields.io/github/issues/joewhocodes/pomodoro-joe.svg?style=for-the-badge
 [issues-url]: https://github.com/joewhocodes/pomodoro-joe/issues
 [license-shield]: https://img.shields.io/github/license/joewhocodes/pomodoro-joe.svg?style=for-the-badge
-[license-url]: https://github.com/joewhocodes/pomodoro-joe/blob/master/LICENSE.txt
+[license-url]: https://github.com/joewhocodes/pomodoro-joe/blob/main/license.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/joewhocodes
 [product-screenshot]: /src//img//screenshot.png
